@@ -1,0 +1,12 @@
+- name: enforce hostname
+  hostname:
+    name: '{{ hostname }}'
+  tags:
+    - hosts
+
+- name: write hosts
+  template:
+    src: hosts.j2
+    dest: /etc/hosts
+  tags:
+    - hosts

@@ -1,0 +1,2 @@
+fqdn: '{{ ansible_fqdn }}'
+hostname: '{{ inventory_hostname }}'
