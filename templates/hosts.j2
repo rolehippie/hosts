@@ -1,6 +1,6 @@
 127.0.0.1 localhost.localdomain localhost
 {{ hosts_ipv4_address }} {{ fqdn }} {{ hostname }}
-{% if hosts_ipv6_address != "" %}
+{% if hosts_ipv6_address | default(False) %}
 
 ::1 ip6-localhost ip6-loopback
 fe00::0 ip6-localnet

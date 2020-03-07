@@ -1,12 +1,16 @@
-- name: enforce hostname
+# Standards: 0.1
+---
+- name: Enforce defined hostname
   hostname:
-    name: '{{ hostname }}'
+    name: "{{ hostname }}"
   tags:
     - hosts
 
-- name: write hosts
+- name: Write hosts config
   template:
     src: hosts.j2
     dest: /etc/hosts
   tags:
     - hosts
+
+...
