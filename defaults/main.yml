@@ -1,7 +1,24 @@
+# Standards: 0.1
+---
+# @var hosts_additions:description: Additional entries for hosts config
+# @var hosts_additions:example: >
+# hosts_additions:
+#   - 192.168.1.10 host1
+#   - 192.168.1.20 host2
+#   - 192.168.1.30 host3
+# @end
 hosts_additions: []
 
-hosts_ipv4_address: '{{ ansible_eth0["ipv4"]["address"] }}'
-hosts_ipv6_address: '{{ ansible_eth0["ipv6"] | map(attribute="address") | first }}'
+# @var hosts_ipv4_address:description: IPv4 address of this host
+hosts_ipv4_address: "{{ ansible_eth0.ipv4.address }}"
 
-fqdn: '{{ ansible_fqdn }}'
-hostname: '{{ inventory_hostname }}'
+# @var hosts_ipv6_address:description: IPv6 address of this host
+hosts_ipv6_address: "{{ ansible_eth0.ipv6 | map(attribute='address') | first }}"
+
+# @var fqdn:description: Fully qualified domain name for this host
+fqdn: "{{ ansible_fqdn }}"
+
+# @var hostname:description: Hostname for this host
+hostname: "{{ inventory_hostname }}"
+
+...
