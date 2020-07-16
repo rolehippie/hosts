@@ -1,0 +1,10 @@
+# Standards: 0.1
+---
+- name: Reload services
+  loop: "{{ hosts_reload_services }}"
+  systemd:
+    name: "{{ item }}"
+    state: reloaded
+    daemon_reload: True
+
+...

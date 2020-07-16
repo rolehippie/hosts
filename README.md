@@ -12,6 +12,7 @@ Ansible role to configure hosts
   * [hosts_additions](#hosts_additions)
   * [hosts_ipv4_address](#hosts_ipv4_address)
   * [hosts_ipv6_address](#hosts_ipv6_address)
+  * [hosts_reload_services](#hosts_reload_services)
 * [Dependencies](#dependencies)
 * [License](#license)
 * [Author](#author)
@@ -79,9 +80,19 @@ IPv6 address of this host
 hosts_ipv6_address: "{{ ansible_eth0.ipv6 | map(attribute='address') | first }}"
 ```
 
+### hosts_reload_services
+
+List of services to reload on hosts change
+
+#### Default value
+
+```YAML
+hosts_reload_services: []
+```
+
 ## Dependencies
 
-- None
+* None
 
 ## License
 

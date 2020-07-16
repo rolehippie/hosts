@@ -7,6 +7,8 @@
     - hosts
 
 - name: Write hosts config
+  notify:
+    - Reload services
   template:
     src: hosts.j2
     dest: /etc/hosts
