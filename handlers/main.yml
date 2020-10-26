@@ -1,4 +1,4 @@
-# Standards: 0.1
+# Standards: 1.2
 ---
 - name: Reload services
   loop: "{{ hosts_reload_services }}"
