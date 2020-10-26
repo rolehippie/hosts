@@ -10,10 +10,10 @@
 hosts_additions: []
 
 # @var hosts_ipv4_address:description: IPv4 address of this host
-hosts_ipv4_address: "{{ ansible_eth0.ipv4.address }}"
+hosts_ipv4_address: "{{ (ansible_eth0.ipv4.address) if ansible_eth0 is defined else (ansible_all_ipv4_addresses | first) }}"
 
 # @var hosts_ipv6_address:description: IPv6 address of this host
-hosts_ipv6_address: "{{ ansible_eth0.ipv6 | map(attribute='address') | first }}"
+hosts_ipv6_address: "{{ (ansible_eth0.ipv6 | map(attribute='address') | first) if ansible_eth0 is defined else (ansible_all_ipv6_addresses | first) }}"
 
 # @var hosts_reload_services:description: List of services to reload on hosts change
 hosts_reload_services: []
