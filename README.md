@@ -1,6 +1,6 @@
 # hosts
 
-[![Source Code](https://img.shields.io/badge/github-source%20code-blue?logo=github&amp;logoColor=white)](https://github.com/rolehippie/hosts)
+[![Source Code](https://img.shields.io/badge/github-source%20code-blue?logo=github&logoColor=white)](https://github.com/rolehippie/hosts)
 [![General Workflow](https://github.com/rolehippie/hosts/actions/workflows/general.yml/badge.svg)](https://github.com/rolehippie/hosts/actions/workflows/general.yml)
 [![Readme Workflow](https://github.com/rolehippie/hosts/actions/workflows/docs.yml/badge.svg)](https://github.com/rolehippie/hosts/actions/workflows/docs.yml)
 [![Galaxy Workflow](https://github.com/rolehippie/hosts/actions/workflows/galaxy.yml/badge.svg)](https://github.com/rolehippie/hosts/actions/workflows/galaxy.yml)
@@ -33,7 +33,6 @@ Building and improving this Ansible role have been sponsored by my current and p
 ## Requirements
 
 - Minimum Ansible version: `2.10`
-
 
 ## Default Variables
 
@@ -94,8 +93,8 @@ IPv6 address of this host
 #### Default value
 
 ```YAML
-hosts_ipv6_address: "{{ (ansible_eth0.ipv6 | map(attribute='address') | first) if\
-  \ ansible_eth0 is defined else (ansible_all_ipv6_addresses | first) }}"
+hosts_ipv6_address: "{{ (ansible_eth0.ipv6 | map(attribute='address') | first) if
+  ansible_eth0 is defined else (ansible_all_ipv6_addresses | first) }}"
 ```
 
 ### hosts_reload_services
