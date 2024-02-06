@@ -1,5 +1,7 @@
 ---
 - name: Enforce defined hostname
+  when:
+    - hosts_enforce_hostname
   ansible.builtin.hostname:
     name: "{{ hostname }}"
   tags:

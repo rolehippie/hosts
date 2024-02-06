@@ -20,6 +20,7 @@ Building and improving this Ansible role have been sponsored by my current and p
   - [fqdn](#fqdn)
   - [hostname](#hostname)
   - [hosts_additions](#hosts_additions)
+  - [hosts_enforce_hostname](#hosts_enforce_hostname)
   - [hosts_ipv4_address](#hosts_ipv4_address)
   - [hosts_ipv6_address](#hosts_ipv6_address)
   - [hosts_reload_services](#hosts_reload_services)
@@ -73,6 +74,16 @@ hosts_additions:
   - 192.168.1.10 host1
   - 192.168.1.20 host2
   - 192.168.1.30 host3
+```
+
+### hosts_enforce_hostname
+
+Enforce the update of the hostname
+
+#### Default value
+
+```YAML
+hosts_enforce_hostname: true
 ```
 
 ### hosts_ipv4_address
