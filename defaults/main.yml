@@ -1,4 +1,3 @@
-# Standards: 1.2
 ---
 # @var hosts_additions:description: Additional entries for hosts config
 # @var hosts_additions:example: >
@@ -17,6 +16,9 @@ hosts_ipv6_address: "{{ (ansible_eth0.ipv6 | map(attribute='address') | first) i
 
 # @var hosts_reload_services:description: List of services to reload on hosts change
 hosts_reload_services: []
+
+# @var hosts_enforce_hostname:description: Enforce the update of the hostname
+hosts_enforce_hostname: True
 
 # @var fqdn:description: Fully qualified domain name for this host
 fqdn: "{{ ansible_fqdn }}"

@@ -1,8 +1,7 @@
-# Standards: 1.2
 ---
 - name: Reload services
   loop: "{{ hosts_reload_services }}"
-  systemd:
+  ansible.builtin.systemd:
     name: "{{ item }}"
     state: reloaded
     daemon_reload: True
