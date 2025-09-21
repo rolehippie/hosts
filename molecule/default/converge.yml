@@ -1,11 +1,11 @@
 ---
 - name: Converge
   hosts: all
-  vars:
-    hosts_enforce_hostname: False
-    hosts_additions:
-      - 192.168.1.1 example.com
-  roles:
-    - role: rolehippie.hosts
+  # vars:
+  #   hosts_enforce_hostname: false
+  #   hosts_additions:
+  #     - 192.168.1.1 example.com
+  # roles:
+  #   - role: rolehippie.hosts
 
 ...

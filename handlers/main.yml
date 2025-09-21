@@ -4,6 +4,6 @@
   ansible.builtin.systemd:
     name: "{{ item }}"
     state: reloaded
-    daemon_reload: True
+    daemon_reload: true
 
 ...

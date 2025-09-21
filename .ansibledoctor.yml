@@ -1,4 +1,5 @@
 ---
-role_name: hosts
+role:
+  name: hosts
 
 ...
