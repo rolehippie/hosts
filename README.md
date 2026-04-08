@@ -93,8 +93,7 @@ IPv4 address of this host
 #### Default value
 
 ```YAML
-hosts_ipv4_address: "{{ (ansible_eth0.ipv4.address) if ansible_eth0 is defined else
-  (ansible_all_ipv4_addresses | first | default('')) }}"
+hosts_ipv4_address: "{{ (ansible_eth0.ipv4.address) if ansible_eth0 is defined else (ansible_all_ipv4_addresses | first | default('')) }}"
 ```
 
 ### hosts_ipv6_address
@@ -104,9 +103,7 @@ IPv6 address of this host
 #### Default value
 
 ```YAML
-hosts_ipv6_address: "{{ (ansible_eth0.ipv6 | map(attribute='address') | first | default(''))
-  if ansible_eth0 is defined and ansible_eth0.ipv6 is defined else (ansible_all_ipv6_addresses
-  | first | default('')) }}"
+hosts_ipv6_address: "{{ (ansible_eth0.ipv6 | map(attribute='address') | first | default('')) if ansible_eth0 is defined and ansible_eth0.ipv6 is defined else (ansible_all_ipv6_addresses | first | default('')) }}"
 ```
 
 ### hosts_reload_services
