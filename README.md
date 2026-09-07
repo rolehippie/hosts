@@ -44,7 +44,7 @@ Fully qualified domain name for this host
 #### Default value
 
 ```YAML
-fqdn: '{{ ansible_facts['fqdn'] }}'
+fqdn: "{{ ansible_facts['fqdn'] }}"
 ```
 
 ### hostname
